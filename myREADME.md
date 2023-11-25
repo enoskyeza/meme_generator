@@ -1,6 +1,6 @@
 Meme generator App
     - Interactive react
-    - Event listerners
+    - Event listerners (https://legacy.reactjs.org/docs/events.html#mouse-events)
     - State
     - Connditional Rendering
     - Forms
