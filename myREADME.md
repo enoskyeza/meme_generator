@@ -6,12 +6,9 @@ Meme generator App
     - Forms
     - Side effects
 
-Project Setup with Vite
-    - Check for npm & node (npm - v / node -v)
-    - run npm create vite@latest
-    -
-
-
+Project Setup with Nextjs
+    - Check './README.md' for instructions
 
 
 Project deploy with Netlify
+    - Build command => next build
