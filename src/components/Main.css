@@ -59,3 +59,31 @@ main {
     cursor: pointer;
 }
 
+.meme-container {
+    width: 100%;
+    position: relative;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.top-text {
+    top: 20px;
+    z-index: 20;
+    position: absolute;
+    width: 100%;
+}
+
+.bottom-text {
+    bottom: 20px;
+    z-index: 21;
+    position: absolute;
+    width: 100%;
+}
+
+.meme--image {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 3px;
+}
