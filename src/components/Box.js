@@ -1,4 +1,24 @@
 'use client'
+
+import React from "react"
+
+export default function Box(props) {
+
+    // Add dynamic styles
+    const styles = {
+        backgroundColor: props.on ? "" : ""
+    }
+
+
+
+    return (
+        <>
+            <div style={styles} className='box-el'></div>
+        </>
+    )
+}
+
+
 /**
      * Challenge part 1:
      * 1. Initialize state with the default value of the
@@ -8,24 +28,13 @@
      *    (Don't worry about using the "on" property yet)
 */
 
-import React from "react"
-import boxes from "./boxes"
-
-export default function App() {
-    const [boxArray, setBoxArray] = React.useState(boxes)
-
-    // Add dynamic styles
-    const styles = {
-        backgroundColor: "black"
-    }
-
-    const boxElements = boxArray.map(box => {
-        return <div style={styles} className='box-el' key={box.id} on={box.on}></div>
-    })
-
-    return (
-        <main>
-            {boxElements}
-        </main>
-    )
-}
+/**
+     * Challenge part 2:
+     * 1. Create a separate component called "Box" and
+     *    replace the `div` above with our <Box /> components
+     * 2. Pass the Box component a prop called `on` with the
+     *    value of the same name from the `boxes` objects
+     * 3. In the Box component, apply dynamic styles to determine
+     *    the backgroundColor of the box. If it's `on`, set the
+     *    backgroundColor to "#222222". If off, set it to "none"
+     */
