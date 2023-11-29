@@ -6,7 +6,7 @@ export default function Box(props) {
 
     // Add dynamic styles
     const styles = {
-        backgroundColor: props.on ? "" : ""
+        backgroundColor: props.on ? "#222222" : "transparent"
     }
 
 
@@ -37,4 +37,15 @@ export default function Box(props) {
      * 3. In the Box component, apply dynamic styles to determine
      *    the backgroundColor of the box. If it's `on`, set the
      *    backgroundColor to "#222222". If off, set it to "none"
-     */
+*/
+
+/**
+     * Challenge: Create state controlling whether
+     * this box is "on" or "off". Use the incoming
+     * `props.on` to determine the initial state.
+     *
+     * Create an event listener so when the box is clicked,
+     * it toggles from "on" to "off".
+     *
+     * Goal: clicking each box should toggle it on and off.
+*/
