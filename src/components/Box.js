@@ -13,7 +13,7 @@ export default function Box(props) {
 
     return (
         <>
-            <div style={styles} className='box-el'></div>
+            <div style={styles} className='box-el' onClick={props.toggle}></div>
         </>
     )
 }

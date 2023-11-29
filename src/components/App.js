@@ -11,11 +11,14 @@ export default function App() {
 
     const [boxArray, setBoxArray] = React.useState(boxes)
 
+
+    function toggle() {
+        console.log('Box clicked')
+    }
+
     const boxElements = boxArray.map(box => {
-        return <Box on={box.on} key={box.id} />
+        return <Box on={box.on} key={box.id} toggle={toggle}/>
     })
-
-
     return (
         <main>
             {boxElements}
