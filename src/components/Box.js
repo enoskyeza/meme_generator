@@ -13,9 +13,16 @@ import boxes from "./boxes"
 
 export default function App() {
     const [boxArray, setBoxArray] = React.useState(boxes)
+
+    // Add dynamic styles
+    const styles = {
+        backgroundColor: "black"
+    }
+
     const boxElements = boxArray.map(box => {
-        return <div className='box-el' key={box.id} on={box.on}></div>
+        return <div style={styles} className='box-el' key={box.id} on={box.on}></div>
     })
+
     return (
         <main>
             {boxElements}
