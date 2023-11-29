@@ -16,9 +16,15 @@ export default function App() {
         console.log(`Box ${id} clicked`)
     }
 
-    const boxElements = boxArray.map(box => {
-        return <Box on={box.on} key={box.id} toggle={toggle} boxId={box.id}/>
-    })
+    const boxElements = boxArray.map(box => (
+        <Box
+            key={box.id}
+            on={box.on}
+            toggle={toggle}
+            id={box.id}
+        />
+    )
+    )
     return (
         <main>
             {boxElements}

@@ -4,21 +4,22 @@ import React from "react"
 
 export default function Box(props) {
     // Local state to implement toggle
-    const[on, setOn] = React.useState(props.on)
+    // const[on, setOn] = React.useState(props.on)
+
+    // function handleClick() {
+    //     setOn(prevState => !prevState)
+    // }
 
     // Add dynamic styles
     const styles = {
-        backgroundColor: on ? "#222222" : "transparent"
-    }
-
-    function handleClick() {
-        setOn(prevState => !prevState)
+        backgroundColor: props.on ? "#222222" : "transparent"
     }
 
 
+    // onClick={() => props.toggle(props.id)}   //Pass a callback function to pass the object id
     return (
         <>
-            <div style={styles} className='box-el' onClick={handleClick}></div>
+            <div style={styles} className='box-el' onClick={() => props.toggle(props.id)}></div>
         </>
     )
 }
