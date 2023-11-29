@@ -1,3 +1,4 @@
+'use client'
 /**
      * Challenge part 1:
      * 1. Initialize state with the default value of the
@@ -12,7 +13,7 @@ import boxes from "./boxes"
 
 export default function App() {
     const [boxArray, setBoxArray] = React.useState(boxes)
-    boxElements = boxArray.map(box => {
+    const boxElements = boxArray.map(box => {
         return <div className='box-el' key={box.id} on={box.on}></div>
     })
     return (
