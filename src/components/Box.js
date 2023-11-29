@@ -11,9 +11,13 @@ import React from "react"
 import boxes from "./boxes"
 
 export default function App() {
+    const [boxArray, setBoxArray] = React.useState(boxes)
+    boxElements = boxArray.map(box => {
+        return <div className='box-el' key={box.id} on={box.on}></div>
+    })
     return (
         <main>
-            <h1>Boxes will go here</h1>
+            {boxElements}
         </main>
     )
 }
