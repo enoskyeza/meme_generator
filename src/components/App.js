@@ -12,8 +12,20 @@ export default function App() {
     const [boxArray, setBoxArray] = React.useState(boxes)
 
 
-    function toggle(id) {
-        console.log(`Box ${id} clicked`)
+    function toggle(box_id) {
+        setBoxArray(prevState => {
+            let updatedArray = []
+            let currentBox
+            for (let i=0; i<prevState.length; i++ ) {
+                currentBox = prevState[i]
+                currentBox.id === box_id ? updatedArray.push({...currentBox, on : !currentBox.on }): updatedArray.push(currentBox)
+
+                console.log(updatedArray)
+            }
+
+            return updatedArray
+    })
+
     }
 
     const boxElements = boxArray.map(box => (
@@ -27,6 +39,8 @@ export default function App() {
     )
     return (
         <main>
+            {/* <Header />
+            <Meme /> */}
             {boxElements}
         </main>
     )
