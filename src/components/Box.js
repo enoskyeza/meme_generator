@@ -3,17 +3,22 @@
 import React from "react"
 
 export default function Box(props) {
+    // Local state to implement toggle
+    const[on, setOn] = React.useState(props.on)
 
     // Add dynamic styles
     const styles = {
-        backgroundColor: props.on ? "#222222" : "transparent"
+        backgroundColor: on ? "#222222" : "transparent"
     }
 
+    function handleClick() {
+        setOn(prevState => !prevState)
+    }
 
 
     return (
         <>
-            <div style={styles} className='box-el' onClick={props.toggle}></div>
+            <div style={styles} className='box-el' onClick={handleClick}></div>
         </>
     )
 }
