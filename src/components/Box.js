@@ -46,7 +46,7 @@ export default function Box(props) {
 */
 
 /**
-     * Challenge: Create state controlling whether
+     * Challenge 3: Create state controlling whether
      * this box is "on" or "off". Use the incoming
      * `props.on` to determine the initial state.
      *
@@ -54,4 +54,14 @@ export default function Box(props) {
      * it toggles from "on" to "off".
      *
      * Goal: clicking each box should toggle it on and off.
+*/
+
+/**
+         * Challenge: use setSquares to update the
+         * correct square in the array.
+         *
+         * Make sure not to directly modify state!
+         *
+         * Hint: look back at the lesson on updating arrays
+         * in state if you need a reminder on how to do this
 */
