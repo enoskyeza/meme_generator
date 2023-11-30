@@ -11,22 +11,15 @@ export default function App() {
 
     const [boxArray, setBoxArray] = React.useState(boxes)
 
-
-    function toggle(box_id) {
-        setBoxArray(prevState => {
-            let updatedArray = []
-            let currentBox
-            for (let i=0; i<prevState.length; i++ ) {
-                currentBox = prevState[i]
-                currentBox.id === box_id ? updatedArray.push({...currentBox, on : !currentBox.on }): updatedArray.push(currentBox)
-
-                console.log(updatedArray)
-            }
-
-            return updatedArray
-    })
-
+    // use declarative method => map()
+    function toggle(id) {
+        setSquares(prevSquares => {
+            return prevSquares.map((square) => {
+                return square.id === id ? {...square, on: !square.on} : square
+            })
+        })
     }
+
 
     const boxElements = boxArray.map(box => (
         <Box
@@ -47,7 +40,23 @@ export default function App() {
 }
 
 
-/* Second option for the change state function
+/* First option for the change state function
+
+   function toggle(box_id) {
+        setBoxArray(prevState => {
+            let updatedArray = []
+            let currentBox
+            for (let i=0; i<prevState.length; i++ ) {
+                currentBox = prevState[i]
+                currentBox.id === box_id ? updatedArray.push({...currentBox, on : !currentBox.on }): updatedArray.push(currentBox)
+
+                console.log(updatedArray)
+            }
+
+            return updatedArray
+    })
+
+    }
 
 function toggle(id) {
         setSquares(prevSquares => {
