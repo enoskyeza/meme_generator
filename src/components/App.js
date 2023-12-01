@@ -4,7 +4,7 @@ import React from "react"
 import Header from "@/components/Header"
 import Meme from "@/components/Meme"
 import Box from "@/components/Box"
-import Jokes from "./Jokes"
+import Joke from "./Jokes"
 import boxes from "./boxes"
 import jokes from "./jokesdata"
 import './boxes.css'
@@ -24,11 +24,16 @@ export default function App() {
             })
         })
     }
+    // console.log(jokesArray)
 
-    const jokeElements = jokesArray.map(joke => {
-        return <Jokes key={joke.id} setup={joke.setup} punchline={joke.punchline} />
-    })
-
+    const jokeElements = jokesArray.map(joke => (
+        <Joke
+            key={joke.id}
+            setup={joke.setup}
+            punchline={joke.punchline}
+        />
+    ))
+    console.log(jokeElements)
 
     const boxElements = boxArray.map(box => (
         <Box
