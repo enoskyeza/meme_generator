@@ -10,9 +10,6 @@ import jokes from "./jokesdata"
 import './boxes.css'
 
 export default function App() {
-    //jokes practices
-    const [jokesArray, setJokesArray] = React.useState(jokes)
-
     // Box challenges
     const [boxArray, setBoxArray] = React.useState(boxes)
 
@@ -24,16 +21,24 @@ export default function App() {
             })
         })
     }
-    // console.log(jokesArray)
+
+
+    //jokes practices
+    const [jokesArray, setJokesArray] = React.useState(jokes)
+    const [isShown, setIsShown] = React.useState(false)
+
+    function toggleShow() {
+        setIsShown(prevState => !prevState)
+    }
 
     const jokeElements = jokesArray.map(joke => (
         <Joke
             key={joke.id}
             setup={joke.setup}
             punchline={joke.punchline}
+            toggle={toggleShow}
         />
     ))
-    console.log(jokeElements)
 
     const boxElements = boxArray.map(box => (
         <Box

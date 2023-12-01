@@ -95,3 +95,9 @@ main {
     line-height: 40px;
     color: #672280;
 }
+
+.jokes-div button {
+    padding: 5px;
+    color: black;
+
+}
