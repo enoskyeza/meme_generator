@@ -37,6 +37,7 @@ export default function App() {
             setup={joke.setup}
             punchline={joke.punchline}
             toggle={toggleShow}
+            isShown = {isShown}
         />
     ))
 
