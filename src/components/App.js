@@ -13,7 +13,7 @@ export default function App() {
 
     // use declarative method => map()
     function toggle(id) {
-        setSquares(prevSquares => {
+        setBoxArray(prevSquares => {
             return prevSquares.map((square) => {
                 return square.id === id ? {...square, on: !square.on} : square
             })
