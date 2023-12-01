@@ -10,7 +10,7 @@ export default function Joke(props) {
         <div className="jokes-div">
             {props.setup && <h3>{props.setup}</h3>}
             <p>{props.punchline}</p>
-            <button>Show punchline</button>
+            <button onClick={props.toggleCon}>Show punchline</button>
             <hr />
         </div>
     )
