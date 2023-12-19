@@ -3,13 +3,25 @@ import './forms.css'
 
 export default function Form() {
 
+    const [formData, setFormData] = React.useState(
+        {
+            firstname:"",
+            lastname:"",
+            email:"",
+        }
+    )
 
-    const [formData, setFormData] = React.useState({
-        firstname:"", lastname:"", email:""
-    })
+        console.log(formData)
 
     function handleChange(event) {
-        console.log('input changed')
+        const {name, value} = event.target
+        setFormData(prevState => {
+            return {
+                ...prevState,
+                [name] : value
+            }
+        })
+
     }
 
     return (
@@ -21,7 +33,7 @@ export default function Form() {
                 name='firstname'
                 value={FormData.firstname}
             />
-            <input
+            {/* <input
                 type="text"
                 placeholder="Last Name"
                 onChange={handleChange}
@@ -34,7 +46,7 @@ export default function Form() {
                 onChange={handleChange}
                 name='email'
                 value={FormData.emailname}
-            />
+            /> */}
 
         </form>
     )
