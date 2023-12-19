@@ -16,11 +16,11 @@ export default function Form() {
     console.log(formData)
 
     function handleChange(event) {
-        const {name, value} = event.target
+        const {name, value, type, checked} = event.target
         setFormData(prevState => {
             return {
                 ...prevState,
-                [name] : value
+                [name] : type==='checkbox' ? checked : value
             }
         })
 
