@@ -4,6 +4,10 @@ import './forms.css'
 export default function Form() {
 
 
+    const [formData, setFormData] = React.useState({
+        firstname:"", lastname:"", email:""
+    })
+
     function handleChange(event) {
         console.log('input changed')
     }
