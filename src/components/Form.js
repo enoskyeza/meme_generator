@@ -9,6 +9,7 @@ export default function Form() {
             lastname:"",
             email:"",
             comment:"",
+            isFriendly: true
         }
     )
 
@@ -54,7 +55,14 @@ export default function Form() {
                 name="comment"
                 value={formData.comment}
             />
+            <input
+                type="checkbox"
+                onChange={handleChange}
+                checked={formData.isFriendly}
+            />
 
+            <label htmlFor="isFriendly">Are you friendly?</label>
+            <br />
         </form>
     )
 }
