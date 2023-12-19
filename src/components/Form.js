@@ -8,10 +8,11 @@ export default function Form() {
             firstname:"",
             lastname:"",
             email:"",
+            comment:"",
         }
     )
 
-        console.log(formData)
+    console.log(formData)
 
     function handleChange(event) {
         const {name, value} = event.target
@@ -33,7 +34,7 @@ export default function Form() {
                 name='firstname'
                 value={FormData.firstname}
             />
-            {/* <input
+            <input
                 type="text"
                 placeholder="Last Name"
                 onChange={handleChange}
@@ -46,7 +47,13 @@ export default function Form() {
                 onChange={handleChange}
                 name='email'
                 value={FormData.emailname}
-            /> */}
+            />
+            <textarea
+                placeholder="Enter comment"
+                onChange={handleChange}
+                name="comment"
+                value={formData.comment}
+            />
 
         </form>
     )
