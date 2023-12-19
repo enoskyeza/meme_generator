@@ -4,9 +4,11 @@ import React from "react"
 import Header from "@/components/Header"
 import Meme from "@/components/Meme"
 import Box from "@/components/Box"
+import Form from "./Form"
 import Joke from "./Jokes"
 import boxes from "./boxes"
 import jokes from "./jokesdata"
+
 // import './boxes.css'
 
 export default function App() {
@@ -48,10 +50,14 @@ export default function App() {
         //    {jokeElements}
         // </main>
 
-    <>
-        <Header />
-        <Meme />
-    </>
+        // <>
+        //     <Header />
+        //     <Meme />
+        // </>
+
+        <>
+            <Form />
+        </>
     )
 }
 
