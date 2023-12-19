@@ -7,7 +7,7 @@ import Box from "@/components/Box"
 import Joke from "./Jokes"
 import boxes from "./boxes"
 import jokes from "./jokesdata"
-import './boxes.css'
+// import './boxes.css'
 
 export default function App() {
     // Box challenges
@@ -44,9 +44,14 @@ export default function App() {
     )
     )
     return (
-        <main>
-           {jokeElements}
-        </main>
+        // <main>
+        //    {jokeElements}
+        // </main>
+
+    <>
+        <Header />
+        <Meme />
+    </>
     )
 }
 
