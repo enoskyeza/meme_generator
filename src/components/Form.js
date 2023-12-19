@@ -3,6 +3,11 @@ import './forms.css'
 
 export default function Form() {
 
+
+    function handleChange(event) {
+        console.log('input changed')
+    }
+
     return (
         <form>
             <input
