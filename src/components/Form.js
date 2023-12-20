@@ -58,6 +58,7 @@ export default function Form() {
             <input
                 type="checkbox"
                 onChange={handleChange}
+                name= "isFriendly"
                 checked={formData.isFriendly}
             />
 
