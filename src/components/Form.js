@@ -9,7 +9,8 @@ export default function Form() {
             lastname:"",
             email:"",
             comment:"",
-            isFriendly: true
+            isFriendly: true,
+            employment: ""
         }
     )
 
