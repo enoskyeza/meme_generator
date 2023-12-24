@@ -15,8 +15,6 @@ export default function Form() {
         }
     )
 
-    console.log(formData)
-
     function handleChange(event) {
         const {name, value, type, checked} = event.target
         setFormData(prevState => {
@@ -29,7 +27,7 @@ export default function Form() {
     }
 
     function handleSubmit() {
-        pass
+        console.log(formData)
     }
 
     return (
