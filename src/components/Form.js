@@ -28,6 +28,10 @@ export default function Form() {
 
     }
 
+    function handleSubmit() {
+        pass
+    }
+
     return (
         <form onSubmit={handleSubmit}>
             <input
