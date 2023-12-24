@@ -9,11 +9,11 @@ export default function Form() {
             lastname:"",
             email:"",
             comment:"",
-            isFriendly: true
+            isFriendly: true,
+            employment: "",
+            favColor: "",
         }
     )
-
-    console.log(formData)
 
     function handleChange(event) {
         const {name, value, type, checked} = event.target
@@ -26,8 +26,12 @@ export default function Form() {
 
     }
 
+    function handleSubmit() {
+        console.log(formData)
+    }
+
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="First Name"
@@ -100,8 +104,27 @@ export default function Form() {
                 />
                 <label htmlFor="full-time">Full-time</label>
                 <br />
-
             </fieldset>
+            <br />
+            <select
+                id="favColor"
+                value={formData.favColor}
+                onChange={handleChange}
+                name="favColor"
+            >
+                <option value="">-- Choose --</option>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="indigo">Indigo</option>
+                <option value="violet">Violet</option>
+            </select>
+            <br />
+            <br />
+            <button>submit</button>
+
         </form>
     )
 }
