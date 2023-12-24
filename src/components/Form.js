@@ -29,7 +29,7 @@ export default function Form() {
     }
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="First Name"
@@ -119,6 +119,9 @@ export default function Form() {
                 <option value="indigo">Indigo</option>
                 <option value="violet">Violet</option>
             </select>
+            <br />
+            <br />
+
         </form>
     )
 }
