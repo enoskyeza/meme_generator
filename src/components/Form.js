@@ -121,6 +121,7 @@ export default function Form() {
             </select>
             <br />
             <br />
+            <button>submit</button>
 
         </form>
     )
