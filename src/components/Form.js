@@ -14,6 +14,8 @@ export default function Form() {
             favColor: "",
         }
     )
+    const id = React.useId()
+
 
     function handleChange(event) {
         const {name, value, type, checked} = event.target
@@ -33,32 +35,36 @@ export default function Form() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label>First Name</label>
+            <label htmlFor={id + '-firstName'}>First Name</label>
             <input
                 type="text"
                 onChange={handleChange}
                 name='firstname'
                 value={FormData.firstname}
+                 id={id + '-firstName'}
             />
-            <label>Last Name</label>
+            <label htmlFor={id + '-lastName'}>Last Name</label>
             <input
                 type="text"
                 onChange={handleChange}
                 name='lastname'
                 value={FormData.lastname}
+                id={id + '-lastName'}
             />
-            <label>Email</label>
+            <label htmlFor={id + '-email'}>Email</label>
             <input
                 type="text"
                 onChange={handleChange}
                 name='email'
                 value={FormData.emailname}
+                id= {id + '-email'}
             />
-            <label>Enter comment</label>
+            <label htmlFor={id + '-comment'}>Enter comment</label>
             <textarea
                 onChange={handleChange}
                 name="comment"
                 value={formData.comment}
+                id = {id + '-comment'}
             />
             <input
                 type="checkbox"
