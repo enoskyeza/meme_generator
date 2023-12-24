@@ -14,6 +14,8 @@ export default function Form() {
             favColor: "",
         }
     )
+    const id = React.useId()
+
 
     function handleChange(event) {
         const {name, value, type, checked} = event.target
