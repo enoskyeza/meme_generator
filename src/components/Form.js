@@ -33,29 +33,29 @@ export default function Form() {
 
     return (
         <form onSubmit={handleSubmit}>
+            <label>First Name</label>
             <input
                 type="text"
-                placeholder="First Name"
                 onChange={handleChange}
                 name='firstname'
                 value={FormData.firstname}
             />
+            <label>Last Name</label>
             <input
                 type="text"
-                placeholder="Last Name"
                 onChange={handleChange}
                 name='lastname'
                 value={FormData.lastname}
             />
+            <label>Email</label>
             <input
                 type="text"
-                placeholder="Email"
                 onChange={handleChange}
                 name='email'
                 value={FormData.emailname}
             />
+            <label>Enter comment</label>
             <textarea
-                placeholder="Enter comment"
                 onChange={handleChange}
                 name="comment"
                 value={formData.comment}
