@@ -1,4 +1,3 @@
-live-site :  https://traveldiary-ens.netlify.app
 
 Meme generator App
     - Interactive react

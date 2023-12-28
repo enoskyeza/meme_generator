@@ -4,22 +4,37 @@ import React from "react"
 import Header from "@/components/Header"
 import Meme from "@/components/Meme"
 import Box from "@/components/Box"
+import Form from "./Form"
+import Joke from "./Jokes"
 import boxes from "./boxes"
-import './boxes.css'
+import jokes from "./jokesdata"
+
+// import './boxes.css'
 
 export default function App() {
-
+    // Box challenges
     const [boxArray, setBoxArray] = React.useState(boxes)
 
     // use declarative method => map()
     function toggle(id) {
-        setBoxArray(prevSquares => {
+        setBo(prevSquares => {
             return prevSquares.map((square) => {
                 return square.id === id ? {...square, on: !square.on} : square
             })
         })
     }
 
+
+    //jokes practices
+    const [jokesArray, setJokesArray] = React.useState(jokes)
+
+    const jokeElements = jokesArray.map(joke => (
+        <Joke
+            key={joke.id}
+            setup={joke.setup}
+            punchline={joke.punchline}
+        />
+    ))
 
     const boxElements = boxArray.map(box => (
         <Box
@@ -31,11 +46,18 @@ export default function App() {
     )
     )
     return (
-        <main>
-            {/* <Header />
-            <Meme /> */}
-            {boxElements}
-        </main>
+        // <main>
+        //    {jokeElements}
+        // </main>
+
+        // <>
+        //     <Header />
+        //     <Meme />
+        // </>
+
+        <>
+            <Form />
+        </>
     )
 }
 

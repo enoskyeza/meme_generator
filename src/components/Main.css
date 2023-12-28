@@ -87,3 +87,17 @@ main {
     max-width: 100%;
     border-radius: 3px;
 }
+
+/* JOKES STYLES */
+
+.jokes-div {
+    /* padding-block: 30px; */
+    line-height: 40px;
+    color: #672280;
+}
+
+.jokes-div button {
+    padding: 5px;
+    color: black;
+
+}
