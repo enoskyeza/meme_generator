@@ -3,10 +3,14 @@ import "@/components/SignupForm.css"
 
 export default function SignupForm(){
 
-    const [formData, setformData] = React.useState({email:"",
-                                            password1:"",
-                                            password2:"",
-                                            subscribe: false,})
+    const [formData, setformData] = React.useState(
+        {
+            email:"",
+            password1:"",
+            password2:"",
+            subscribe: false,
+        }
+    )
 
     function handleSubmit(event) {
         event.preventDefault()
@@ -20,7 +24,7 @@ export default function SignupForm(){
         setformData(prevState => {
             return {
                 ...prevState,
-                email: value,
+                [name]: value,
             }
         })
     }
@@ -34,7 +38,7 @@ export default function SignupForm(){
                         type="text"
                         placeholder="Email address"
                         onChange={handleInput}
-                        // value={}
+                        value={formData.email}
                     />
                     <input
                         type="text"
