@@ -41,10 +41,16 @@ export default function SignupForm(){
                         value={formData.email}
                     />
                     <input
+                        onChange={handleInput}
+                        name="password1"
+                        value={formData.password1}
                         type="text"
                         placeholder="Password"
                     />
                     <input
+                        onChange={handleInput}
+                        name="password2"
+                        value={formData.password2}
                         type="text"
                         placeholder="Confirm Password"
                     />
