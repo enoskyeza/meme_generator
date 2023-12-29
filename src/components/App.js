@@ -8,6 +8,7 @@ import Form from "./Form"
 import Joke from "./Jokes"
 import boxes from "./boxes"
 import jokes from "./jokesdata"
+import SignupForm from "./SignupForm"
 
 // import './boxes.css'
 
@@ -55,8 +56,12 @@ export default function App() {
         //     <Meme />
         // </>
 
+        // <>
+        //     <Form />
+        // </>
+
         <>
-            <Form />
+            <SignupForm />
         </>
     )
 }
