@@ -4,6 +4,7 @@ import "@/components/SignupForm.css"
 export default function SignupForm(){
 
     function handleSubmit(event) {
+        event.preventDefault()
         console.log("form submitted succefully")
     }
 
