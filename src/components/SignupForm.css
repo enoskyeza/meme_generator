@@ -32,6 +32,7 @@ body {
     padding: 20px 5px;
     font-size: 16px;
     margin-bottom: 30px;
+    color: black;
 
 }
 
@@ -46,4 +47,8 @@ body {
     border-radius: 6px;
     font-size: 16px;
     margin-top: 20px;
+}
+
+.form-bg button:hover {
+    cursor: pointer;
 }
