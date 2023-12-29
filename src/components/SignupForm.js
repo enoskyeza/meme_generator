@@ -1,8 +1,28 @@
 import React from "react";
-import { render } from "react-dom";
+import "@/components/SignupForm.css"
 
 export default function SignupForm(){
     return(
-        <h1>Signup Form task</h1>
+        <div className="form-bg">
+            <input
+                type="text"
+                placeholder="Email address"
+            />
+            <input
+                type="text"
+                placeholder="Password"
+            />
+            <input
+                type="text"
+                placeholder="Confirm Password"
+            />
+            <input
+                type="checkbox"
+            />
+            <label htmlFor="subscirbe">I want to join the newsletter</label>
+
+            <br/>
+            <button>Sign Up</button>
+        </div>
     )
 }
