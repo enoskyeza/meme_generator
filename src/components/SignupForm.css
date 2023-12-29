@@ -8,6 +8,12 @@ body {
     background: #663399;
 }
 
+.main-container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
 .form-bg {
     display: flex;
     flex-direction: column;

@@ -3,7 +3,7 @@ import "@/components/SignupForm.css"
 
 export default function SignupForm(){
     return(
-        <div >
+        <div className="main-container" >
             <form className="form-bg">
                 <div className="input-section">
                     <input
