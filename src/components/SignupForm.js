@@ -3,19 +3,31 @@ import "@/components/SignupForm.css"
 
 export default function SignupForm(){
 
+    const [formData, setformData] = React.useState({email:"",
+                                            password1:"",
+                                            password2:"",
+                                            subscribe: false,})
+
     function handleSubmit(event) {
         event.preventDefault()
-        console.log("form submitted succefully")
+        console.log(formData)
+
     }
 
+    function handleInput() {
+        console.log('state changed')
+    }
 
     return(
         <div className="main-container" >
             <form onSubmit={handleSubmit} className="form-bg">
                 <div className="input-section">
                     <input
+                        name="email"
                         type="text"
                         placeholder="Email address"
+                        onChange={handleInput}
+                        // value={}
                     />
                     <input
                         type="text"
