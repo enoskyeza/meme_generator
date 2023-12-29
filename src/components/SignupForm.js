@@ -15,8 +15,8 @@ export default function SignupForm(){
     }
 
     function handleInput(event) {
-        const inputValue = event.target.value
-        console.log(inputValue)
+        const {value} = event.target
+        console.log(value)
     }
 
     return(
