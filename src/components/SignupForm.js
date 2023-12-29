@@ -15,8 +15,14 @@ export default function SignupForm(){
     }
 
     function handleInput(event) {
-        const {value} = event.target
-        console.log(value)
+        // console.log(value, name)
+        const {name, value} = event.target
+        setformData(prevState => {
+            return {
+                ...prevState,
+                email: value,
+            }
+        })
     }
 
     return(
