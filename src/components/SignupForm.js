@@ -2,9 +2,15 @@ import React from "react";
 import "@/components/SignupForm.css"
 
 export default function SignupForm(){
+
+    function handleSubmit(event) {
+        console.log("form submitted succefully")
+    }
+
+
     return(
         <div className="main-container" >
-            <form className="form-bg">
+            <form onSubmit={handleSubmit} className="form-bg">
                 <div className="input-section">
                     <input
                         type="text"
