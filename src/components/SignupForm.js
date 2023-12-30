@@ -24,7 +24,7 @@ export default function SignupForm(){
         setformData(prevState => {
             return {
                 ...prevState,
-                [name]: value,
+                [name]: type==="checked" ? value : checked,
             }
         })
     }
@@ -58,6 +58,7 @@ export default function SignupForm(){
                 <div className="checkbox-input">
                     <input
                         type="checkbox"
+                        onChange={handleInput}
                         checked={formData.subscribe ? true : false}
                     />
                     <label htmlFor="subscirbe">I want to join the newsletter</label>
