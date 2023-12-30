@@ -24,7 +24,7 @@ export default function SignupForm(){
         setformData(prevState => {
             return {
                 ...prevState,
-                [name]: type==="checked" ? value : checked,
+                [name]: type==="checkedbox" ? checked : value,
             }
         })
     }
