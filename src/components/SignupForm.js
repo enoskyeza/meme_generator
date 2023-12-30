@@ -20,11 +20,11 @@ export default function SignupForm(){
 
     function handleInput(event) {
         // console.log(value, name)
-        const {name, value} = event.target
+        const {name, value, type, checked} = event.target
         setformData(prevState => {
             return {
                 ...prevState,
-                [name]: value,
+                [name]: type==="checkbox" ? checked : value,
             }
         })
     }
@@ -57,8 +57,9 @@ export default function SignupForm(){
                 </div>
                 <div className="checkbox-input">
                     <input
-                        className=""
                         type="checkbox"
+                        onChange={handleInput}
+                        checked={formData.subscribe}
                     />
                     <label htmlFor="subscirbe">I want to join the newsletter</label>
                 </div>
