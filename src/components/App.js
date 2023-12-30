@@ -3,14 +3,29 @@
 import React from "react"
 import Header from "@/components/Header"
 import Meme from "@/components/Meme"
-import Box from "@/components/Box"
-import Form from "./Form"
-import Joke from "./Jokes"
-import boxes from "./boxes"
-import jokes from "./jokesdata"
-import SignupForm from "./SignupForm"
+// import Box from "@/components/Box"
+// import Form from "./Form"
+// import Joke from "./Jokes"
+// import boxes from "./boxes"
+// import jokes from "./jokesdata"
+// import SignupForm from "./SignupForm"
 
 // import './boxes.css'
+
+export default function App() {
+
+    return (
+
+        <>
+            <Header />
+            <Meme />
+        </>
+
+    )
+}
+
+
+/*
 
 export default function App() {
     // Box challenges
@@ -47,24 +62,28 @@ export default function App() {
     )
     )
     return (
+
+        <>
+            <Header />
+            <Meme />
+        </>
+
+
         // <main>
         //    {jokeElements}
         // </main>
 
         // <>
-        //     <Header />
-        //     <Meme />
-        // </>
-
-        // <>
         //     <Form />
         // </>
 
-        <>
-            <SignupForm />
-        </>
+        // <>
+        //     <SignupForm />
+        // </>
     )
 }
+
+*/
 
 
 /* First option for the change state function

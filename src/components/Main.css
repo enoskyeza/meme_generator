@@ -35,11 +35,11 @@ main {
     font-weight: 500;
 }
 
-/* MEME JS STYLES */
 .form {
     display: grid;
     grid-template: 40px 40px / 1fr 1fr;
     gap: 17px;
+    margin-bottom: 17px;
 }
 
 .form--input {
@@ -59,45 +59,44 @@ main {
     cursor: pointer;
 }
 
-.meme-container {
-    width: 100%;
+.meme {
     position: relative;
-    color: white;
-    font-size: 45px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.top-text {
-    top: 20px;
-    z-index: 20;
-    position: absolute;
-    width: 100%;
-}
-
-.bottom-text {
-    bottom: 20px;
-    z-index: 21;
-    position: absolute;
-    width: 100%;
 }
 
 .meme--image {
-    margin-top: 15px;
     max-width: 100%;
     border-radius: 3px;
 }
 
-/* JOKES STYLES */
-
-.jokes-div {
-    /* padding-block: 30px; */
-    line-height: 40px;
-    color: #672280;
+.meme--text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
 }
 
-.jokes-div button {
-    padding: 5px;
-    color: black;
+.bottom {
+    bottom: 0;
+}
 
+.top {
+    top: 0;
 }
