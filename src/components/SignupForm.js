@@ -8,25 +8,33 @@ export default function SignupForm(){
             email:"",
             password1:"",
             password2:"",
-            subscribe: false,
+            subscribe: true,
         }
     )
 
     function handleSubmit(event) {
         event.preventDefault()
-        console.log(formData)
+
+        if(formData.password1 === formData.password2) {
+            console.log("Successfully Signed up!")
+        } else {
+            console.log("Passwords do not match.")
+            return
+        }
+
+        if(formData.subscribe){
+            console.log( "Thanks for signing up for our newsletter!")
+        }
 
     }
 
     function handleInput(event) {
         // console.log(value, name)
         const {name, value, type, checked} = event.target
-        setformData(prevState => {
-            return {
+        setformData(prevState => ({
                 ...prevState,
-                [name]: type==="checkbox" ? checked : value,
-            }
-        })
+                [name]: type === "checkbox" ? checked : value
+        }))
     }
 
     return(
@@ -57,6 +65,7 @@ export default function SignupForm(){
                 </div>
                 <div className="checkbox-input">
                     <input
+                        name="subscribe"
                         type="checkbox"
                         onChange={handleInput}
                         checked={formData.subscribe}
