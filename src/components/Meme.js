@@ -24,6 +24,8 @@ export default function Meme() {
 
     }
 
+
+
     return (
         <main>
             <div className="form">
@@ -31,11 +33,13 @@ export default function Meme() {
                     type="text"
                     placeholder="Top text"
                     className="form--input"
+                    onChange={handleChange}
                 />
                 <input
                     type="text"
                     placeholder="Bottom text"
                     className="form--input"
+                    onChange={handleChange}
                 />
                 <button
                     className="form--button"
