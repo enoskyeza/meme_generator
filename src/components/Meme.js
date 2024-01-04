@@ -2,6 +2,7 @@
 import React from "react"
 import memesData from "./memesData.js"
 import './Main.css'
+import react from "react"
 
 export default function Meme() {
 
@@ -21,6 +22,14 @@ export default function Meme() {
             ...prevMeme,
             randomImage: url
         }))
+
+    }
+
+    const [inputData, setInputData] = react.useState({'input-top':"",
+                                                       'input-bottom':""})
+
+
+    function onChange(event) {
 
     }
 
