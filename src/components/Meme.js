@@ -25,12 +25,13 @@ export default function Meme() {
 
     }
 
-    const [inputData, setInputData] = react.useState({'input-top':"",
-                                                       'input-bottom':""})
-
-
     function onChange(event) {
-
+        const {name, value} = event.target
+        console.log(name, value)
+        // setInputData(prevState => {
+        //     ...prevState,
+        //     [name] : value,
+        // })
     }
 
 
@@ -43,12 +44,16 @@ export default function Meme() {
                     placeholder="Top text"
                     className="form--input"
                     onChange={handleChange}
+                    name="topText"
+                    value={inputData.topText}
                 />
                 <input
                     type="text"
                     placeholder="Bottom text"
                     className="form--input"
                     onChange={handleChange}
+                    name="bottomText"
+                    value={inputData.bottomText}
                 />
                 <button
                     className="form--button"
