@@ -8,8 +8,10 @@ function UseEffectApp() {
 
     // side effects
     React.useEffect(function() {
-        console.log("Effect ran")
-    }, [count])
+        fetch("https://swapi.dev/api/people/1")
+        .then(res => res.json())
+        .then(data => console.log(data))
+    }, [0])
 
     return (
         <div>
