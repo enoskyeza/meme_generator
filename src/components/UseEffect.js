@@ -15,9 +15,9 @@ function UseEffectApp() {
 
     return (
         <div>
-            <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
             <h2>The count is {count}</h2>
-            <button onClick={() => setCount(prevCount => prevCount + 1)}>Add</button>
+            <button onClick={() => setCount(prevCount => prevCount + 1)}>Get Next Character</button>
+            <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
         </div>
     )
 }
