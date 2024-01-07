@@ -11,7 +11,7 @@ function UseEffectApp() {
         fetch(`https://swapi.dev/api/people/${count}`)
         .then(res => res.json())
         .then(data => setStarWarsData(data))
-    }, [])
+    }, [count])
 
     return (
         <div>
