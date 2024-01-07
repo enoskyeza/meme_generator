@@ -1,6 +1,6 @@
-import React from React
+import React from "react"
 
-export default function useEffectApp() {
+function UseEffectApp() {
     const [starWarsData, setStarWarsData] = React.useState({})
     const [count, setCount] = React.useState(0)
 
@@ -19,3 +19,5 @@ export default function useEffectApp() {
         </div>
     )
 }
+
+export default UseEffectApp;
