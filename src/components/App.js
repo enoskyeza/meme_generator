@@ -9,6 +9,7 @@ import Meme from "@/components/Meme"
 // import boxes from "./boxes"
 // import jokes from "./jokesdata"
 // import SignupForm from "./SignupForm"
+import useEffectApp from "./UseEffect"
 
 // import './boxes.css'
 
@@ -17,8 +18,7 @@ export default function App() {
     return (
 
         <>
-            <Header />
-            <Meme />
+            <useEffectApp />
         </>
 
     )
