@@ -9,7 +9,7 @@ function UseEffectApp() {
     // side effects
     React.useEffect(function() {
         console.log("Effect ran")
-    }, [0])
+    }, [count])
 
     return (
         <div>
