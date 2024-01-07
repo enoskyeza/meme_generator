@@ -1,6 +1,7 @@
 'use client'
 
 import React from "react"
+import UseEffectApp from "@/components/UseEffect"
 import Header from "@/components/Header"
 import Meme from "@/components/Meme"
 // import Box from "@/components/Box"
@@ -10,15 +11,14 @@ import Meme from "@/components/Meme"
 // import jokes from "./jokesdata"
 // import SignupForm from "./SignupForm"
 
+
 // import './boxes.css'
 
 export default function App() {
 
     return (
-
         <>
-            <Header />
-            <Meme />
+            <UseEffectApp />
         </>
 
     )
