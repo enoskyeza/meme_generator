@@ -22,17 +22,25 @@ export default function Meme() {
      * Instead, use `.then()` blocks to resolve the promises
      * from using `fetch`. We'll learn why after this challenge.
 */
+    const [allMemes, setAllMemes] = React.useState({})
+
+    React.useEffect(function() {
+        console.log("data rendered")
+        fetch(`https://api.imgflip.com/get_memes`)
+        .then(res => res.json())
+        .then(data => setAllMemes(data.data.memes))}, []
+    )
 
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg"
     })
+
     const [allMemeImages, setAllMemeImages] = React.useState(memesData)
 
-
     function getMemeImage() {
-        const memesArray = allMemeImages.data.memes
+        const memesArray = allMemes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
         const url = memesArray[randomNumber].url
         setMeme(prevMeme => ({
@@ -50,20 +58,8 @@ export default function Meme() {
         }))
     }
 
-    const [allMemes, setAllMemes] = React.useState({})
-
-    React.useEffect(function() {
-        console.log("data rendered")
-        fetch(`https://api.imgflip.com/get_memes`)
-        .then(res => res.json())
-        .then(data => setAllMemes(data.data.memes))}, []
-    )
-
     return (
         <main>
-            <div className="meme-data">
-                <pre>{JSON.stringify(allMemes, null, 2)}</pre>
-            </div>
             <div className="form">
                 <input
                     type="text"
