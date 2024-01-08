@@ -67,4 +67,4 @@ USE EFFECT QUIZ
      * Hint: for now, don't try to use an async/await function.
      * Instead, use `.then()` blocks to resolve the promises
      * from using `fetch`. We'll learn why after this challenge.
-     */
+*/
