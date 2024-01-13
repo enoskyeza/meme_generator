@@ -10,7 +10,7 @@ import Meme from "@/components/Meme"
 // import jokes from "./jokesdata"
 // import SignupForm from "./SignupForm"
 // import UseEffectApp from "@/components/UseEffect"
-import WindowTracker from "@/components/WindowTracker"
+// import WindowTracker from "@/components/WindowTracker"
 
 
 // import './boxes.css'
@@ -19,7 +19,8 @@ export default function App() {
 
     return (
         <>
-            <WindowTracker />
+            <Header />
+            <Meme />
         </>
 
     )

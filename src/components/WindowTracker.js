@@ -6,10 +6,19 @@ export default function WindowTracker() {
     const [windowSize, setWindowSize]  = React.useState(window.innerWidth)
 
     React.useEffect(() => {
-        window.addEventListener('resize', function(){
+        function watchWidth(){
+            console.log("Setting up...")
             setWindowSize(window.innerWidth)
-        })
-    }, [windowSize])
+        }
+
+        window.addEventListener('resize', watchWidth)
+
+        return function() {
+            console.log("Cleaning up...")
+            window.removeEventListener('resize', watchWidth)
+        }
+
+    }, [])
 
     function handleToggle() {
         setShow(prevState => !prevState)
